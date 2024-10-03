@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchProducts() {
-    fetch('http://vakajose.online/api/products')
+    fetch('http://shopping.vakajose.online/api/products')
         .then(response => response.json())
         .then(products => displayProducts(products))
         .catch(error => console.error('Error fetching products:', error));
