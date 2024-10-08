@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 function fetchProducts() {
-    fetch('http://localhost:8000/api/products')
+    fetch('http://shopping.vakajose.online/api/products')
         .then(response => response.json())
         .then(products => displayProducts(products))
         .catch(error => console.error('Error fetching products:', error));
@@ -103,7 +103,7 @@ function openBuyModal(productId, productName, productPrice, quantity) {
 }
 
 function buyProduct(productId, quantity) {
-    fetch(`http://localhost:8000/api/products/${productId}/sale`, {
+    fetch(`http://shopping.vakajose.online/api/products/${productId}/sale`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
